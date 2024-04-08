@@ -1,1 +1,1 @@
-These are projects I've worked on in my own time. The NN projects are the two Neural Network files, and the pollen game is a completely separate project.
+These are projects I've worked on in my own time. The NN projects two experimental neural network files, and the pollen game is a completely separate project. There's also a finished neural network that can be run.

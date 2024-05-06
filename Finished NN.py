@@ -1,6 +1,6 @@
 import numpy as np
 
-# sigmoid activation function (chose this one over ReLU or tanh since this network is using binary classification)
+# sigmoid activation function (I chose this one over ReLU or tanh since this network is using binary classification)
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
     

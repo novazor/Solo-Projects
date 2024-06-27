@@ -1,1 +1,13 @@
-These are projects I've worked on in my own time. There are two experimental neural network files, and the pollen game is a completely separate project. There's also a finished neural network that can be run.
+## Rohan Parekh's NN Projects
+
+### Cat Classifier 
+- Binary classifier in which you input an image. If it's an image of a cat, it outputs 1, else 0.
+- Deep Neural network utilizing the dnn_functions file.
+
+### Legendary Pokemon Predictor
+- Confidence Prediction model predicting if a pokemon is legendary or not, ranging between 0(not a legendary) and 1(legendary).
+- It bases this prediction on the pokemon's numeric stats, such as its height, weight, base stats, type advantages, etc.
+- Utilizes imported libraries, such as PyTorch
+- Datasets found on Kaggle:
+- https://www.kaggle.com/datasets/arenagrenade/the-complete-pokemon-images-data-set
+- https://www.kaggle.com/datasets/rounakbanik/pokemon

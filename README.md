@@ -7,7 +7,7 @@
 ### Legendary Pokemon Predictor (Separate Jupyter Notebook demonstration included)
 - Confidence Prediction model predicting if a pokemon is legendary or not, outputting a confidence level.
 - Input: The pokemon's numeric stats, such as its height, weight, base stats, type advantages, etc. Images are only used for show.
-- Output: A confidence level (Decimal between 0 and 1) as to whether or not it is a legendary. 1 = Legendary, 0 = Non-legendary.
+- Output: A confidence level (Decimal between 0 and 1) as to whether or not it is a legendary. Closer to 1 = Legendary, closer to 0 = Non-legendary.
 - Utilizes several libraries including PyTorch
 - Datasets downloaded from Kaggle:  
 https://www.kaggle.com/datasets/arenagrenade/the-complete-pokemon-images-data-set

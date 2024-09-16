@@ -14,12 +14,6 @@ m_train = train_x_orig.shape[0]
 num_px = train_x_orig.shape[1]
 m_test = test_x_orig.shape[0]
 
-# Example of a picture
-index = 10
-plt.imshow(train_x_orig[index])
-print ("y = " + str(train_y[:, index]) + ", it's a '" + classes[np.squeeze(train_y[:, index])].decode("utf-8") +  "' picture.")
-plt.show()
-
 # Flatten and standardize the dataset
 train_x_flatten = train_x_orig.reshape(train_x_orig.shape[0], -1).T
 test_x_flatten = test_x_orig.reshape(test_x_orig.shape[0], -1).T
@@ -68,9 +62,9 @@ parameters, costs = dnn(train_x, train_y, layers_dims, num_iterations=2500, prin
 pred_train = predict(train_x, train_y, parameters)
 pred_test = predict(test_x, test_y, parameters)
 
-# Example of predicting with your own image
+# Testing the model on an inputted image
 my_image = "cat2.jpg"
-my_label_y = [1] # the true class of your image (1 -> cat, 0 -> non-cat)
+my_label_y = [1] # true class of the test image (1 -> cat, 0 -> non-cat)
 
 fname = "images/" + my_image
 image = np.array(Image.open(fname).resize((num_px, num_px)))

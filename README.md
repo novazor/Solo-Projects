@@ -1,13 +1,14 @@
 ## Rohan Parekh's Portfolio
 
-### Cat Classifier (Self-made methods)
-- Binary classifier in which you input an image. If it's an image of a cat, it outputs 1, else 0.
-- Deep Neural network utilizing the dnn_functions file. I wrote these functions myself.
+### NLP Model (Tensorflow Keras)
+- Sentiment Classification model using the public twitter_samples dataset from NLTK.
+- Allows an inputted tweet to receive either a positive or negative sentiment.
+- Manual inputs available at the end
 
 ### Legendary Pokemon Predictor (PyTorch) 
 - Confidence Prediction model predicting if a pokemon is legendary or not, outputting a confidence level.
-- Input: The pokemon's numeric stats, such as its height, weight, base stats, type advantages, etc. Images are only used for show.
-- Output: A confidence level (Decimal between 0 and 1) as to whether or not it is a legendary. Closer to 1 = Legendary, closer to 0 = Non-legendary.
+- Input: The pokemon's numeric stats, such as its height, weight, base stats, type advantages, etc. Images are only used   for show.
+- Output: A confidence level (Decimal between 0 and 1) as to whether or not it is a legendary. Closer to 1 = Legendary,    closer to 0 = Non-legendary.
 - Utilizes several libraries including PyTorch
 - Jupyter Notebook demonstration included with comments
 - Datasets downloaded from Kaggle:  
@@ -20,6 +21,6 @@
 
 ### Life_Expectancy_Demo
 - Simple demonstration of cleaning, manipulating, and generating insights from a large dataset
-- Thought process explained throughout
+- Thought process explained with comments
 - Dataset found on Kaggle:
   https://www.kaggle.com/datasets/lashagoch/life-expectancy-who-updated/data

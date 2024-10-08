@@ -1,6 +1,6 @@
 ## Rohan Parekh's Portfolio
 
-Note - You may download these files to run them, but the datasets will need to be downloaded as well. All datasets are either linked here, or come with the imported libraries.
+Note - You may download these files to run them, but the datasets will need to be downloaded as well. All datasets are either linked here, or automatically install with the imported libraries.
 
 ### NLP Model (Tensorflow Keras)
 - Sentiment Classification model using the public twitter_samples dataset from NLTK library.

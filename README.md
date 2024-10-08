@@ -19,7 +19,7 @@ Note - You may download these files to run them, but the datasets will need to b
   https://www.kaggle.com/datasets/arenagrenade/the-complete-pokemon-images-data-set
   https://www.kaggle.com/datasets/rounakbanik/pokemon
 
-### Life_Expectancy_Demo
+### Life Expectancy Demo
 - Demonstration of cleaning, manipulating, and generating insights from a large dataset
 - Thought process explained with comments
 - Dataset found on Kaggle:

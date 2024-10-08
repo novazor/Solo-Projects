@@ -1,7 +1,7 @@
 ## Rohan Parekh's Portfolio
 
 ### NLP Model (Tensorflow Keras)
-- Sentiment Classification model using the public twitter_samples dataset from NLTK.
+- Sentiment Classification model using the public twitter_samples dataset from NLTK library.
 - Allows an inputted tweet to receive either a positive or negative sentiment.
 - Manual inputs available at the end
 

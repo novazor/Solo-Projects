@@ -5,7 +5,7 @@ Note - You may download these files to run them, but the datasets will need to b
 ### NLP Model (Tensorflow Keras)
 - Sentiment Classification model using the public twitter_samples dataset from NLTK library.
 - Allows an inputted tweet to receive either a positive or negative sentiment.
-- Manual inputs available at the end
+- Manual tweet inputs available at the end
 
 ### Cifar10 Image classifier (TensorFlow Keras)
 - Image classification with multiple classes on the public Cifar10 Dataset

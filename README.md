@@ -20,7 +20,7 @@ Note - You may download these files to run them, but the datasets will need to b
   https://www.kaggle.com/datasets/rounakbanik/pokemon
 
 ### Life_Expectancy_Demo
-- Simple demonstration of cleaning, manipulating, and generating insights from a large dataset
+- Demonstration of cleaning, manipulating, and generating insights from a large dataset
 - Thought process explained with comments
 - Dataset found on Kaggle:
   https://www.kaggle.com/datasets/lashagoch/life-expectancy-who-updated/data

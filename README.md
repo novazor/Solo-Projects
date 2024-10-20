@@ -7,13 +7,14 @@ Note - You may download these files to run them, but the datasets will need to b
 - Allows an inputted tweet to receive either a positive or negative sentiment.
 - Manual tweet inputs available
 
-### Cifar10 Image classifier (TensorFlow Keras)
-- Image classification with multiple classes on the public Cifar10 Dataset
-- Classifies an input image among classes such as ship, automobile, deer, cat, etc.
-
 ### Customer Churn Predictor (TensorFlow Keras)
 - Predicts customer churn on a bank dataset
 - Dataset from Kaggle: https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset/data
+
+### Handwritten (PyTorch)
+- Image classification on inputted images of handwritten numbers
+- Ten distinct classes (numbers 0-9)
+- Dataset from Kaggle https://www.kaggle.com/datasets/dhruvildave/english-handwritten-characters-dataset
 
 ### Legendary Pokemon Predictor (PyTorch) 
 - Confidence Prediction model predicting if a pokemon is legendary or not, outputting a confidence level.
@@ -22,6 +23,10 @@ Note - You may download these files to run them, but the datasets will need to b
 - Datasets downloaded from Kaggle:  
   https://www.kaggle.com/datasets/arenagrenade/the-complete-pokemon-images-data-set
   https://www.kaggle.com/datasets/rounakbanik/pokemon
+  
+### Cifar10 Image classifier (TensorFlow Keras)
+- Image classification with multiple classes on the public Cifar10 Dataset
+- Classifies an input image among classes such as ship, automobile, deer, cat, etc.
 
 ### Life Expectancy Demo
 - Demonstration of cleaning, manipulating, and generating insights from a large dataset, including regression modeling

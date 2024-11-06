@@ -1,6 +1,11 @@
 ## Rohan Parekh's Portfolio
 
 Note - You may download these files to run them, but the datasets will need to be downloaded as well. All datasets are either linked here, or automatically install with the imported libraries.
+### Spam Detector (PyTorch)
+- NLP classification model on emails, labeling as spam or not spam
+- Uses Word2Vec embeddings and NLTK for tokenization
+- 96% Accuracy
+
 
 ### NLP Model (Tensorflow Keras)
 - Sentiment Classification model using the public twitter_samples dataset from NLTK library.

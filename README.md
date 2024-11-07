@@ -3,7 +3,7 @@
 Note - You may download these files to run them, but the datasets will need to be downloaded as well. All datasets are either linked here, or automatically install with the imported libraries.
 ### Spam Detector (PyTorch)
 - NLP classification model on emails (String inputs), labeling as spam or not spam
-- Uses Word2Vec embeddings and NLTK for tokenization
+- Utilizes Word2Vec embeddings and NLTK for tokenization
 - 99% Accuracy
 - Dataset from Kaggle: https://www.kaggle.com/datasets/nitishabharathi/email-spam-dataset
 

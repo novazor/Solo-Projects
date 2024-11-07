@@ -5,6 +5,7 @@ Note - You may download these files to run them, but the datasets will need to b
 - NLP classification model on emails (String inputs), labeling as spam or not spam
 - Uses Word2Vec embeddings and NLTK for tokenization
 - 99% Accuracy
+- Dataset from Kaggle: https://www.kaggle.com/datasets/nitishabharathi/email-spam-dataset
 
 
 ### NLP Model (Tensorflow Keras)

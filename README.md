@@ -1,6 +1,6 @@
 ## Rohan Parekh's Portfolio
 
-Note - You may download these files to run them, but the datasets will need to be downloaded as well. All datasets are either linked here, or automatically install with the imported libraries.
+Note - This repository is a "gallery" of my work. You may pull these files to run them locally, but the datasets will need to be downloaded as well. All datasets are either externally linked here, or automatically install with the imported libraries.
 ### Spam Detector (PyTorch)
 - NLP classification model on emails (String inputs), labeling as spam or not spam
 - Utilizes Word2Vec embeddings and NLTK for tokenization

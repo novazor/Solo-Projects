@@ -8,7 +8,7 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 - Kaggle Dataset: https://www.kaggle.com/datasets/nitishabharathi/email-spam-dataset
 
 
-### NLP Model (Tensorflow Keras)
+### Tweet Classifier (Tensorflow Keras)
 - Sentiment Classification model using the public twitter_samples dataset from NLTK library.
 - Allows an inputted tweet to receive either a positive or negative sentiment.
 - Manual tweet inputs available

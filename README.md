@@ -34,7 +34,7 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 - Image classification with multiple classes on the public Cifar10 Dataset
 - Classifies an input image among classes such as ship, automobile, deer, cat, etc.
 
-### Life Expectancy Demo
+### Life Expectancy Demo (No machine learning, only data analysis)
 - Demonstration of cleaning, manipulating, and generating insights from a large dataset, including regression modeling
 - Discrete steps + thought process explained with comments
 - Kaggle Dataset:

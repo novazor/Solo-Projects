@@ -22,14 +22,6 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 - Ten distinct classes (numbers 0-9)
 -  Kaggle Dataset: https://www.kaggle.com/datasets/dhruvildave/english-handwritten-characters-dataset
 
-### Legendary Pokemon Predictor (PyTorch) 
-- Confidence Prediction model predicting if a pokemon is legendary or not, outputting a confidence level.
-- Input: The pokemon's numeric stats, such as its height, weight, base stats, type advantages, etc. Images are only used for show.
-- Output: A confidence level (Decimal between 0 and 1) as to whether or not it is a legendary. Closer to 1 = Legendary, closer to 0 = Non-legendary.
-- Kaggle Dataset:  
-  https://www.kaggle.com/datasets/arenagrenade/the-complete-pokemon-images-data-set
-  https://www.kaggle.com/datasets/rounakbanik/pokemon
-  
 ### Cifar10 Image classifier (TensorFlow Keras)
 - Image classification with multiple classes on the public Cifar10 Dataset
 - Classifies an input image among classes such as ship, automobile, deer, cat, etc.

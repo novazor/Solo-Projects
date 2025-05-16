@@ -30,7 +30,7 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 ### Cifar10 Image classifier (TensorFlow Keras)
 - Determines if an image is of a ship, automobile, deer, cat, etc.
 - 10 distinct classes
-- Image classification with multiple classes on the public Cifar10 Dataset
+- Dataset imported from Cifar10 library
 
 ### Life Expectancy Demo (No ML - only data analysis)
 - Demonstration of cleaning, manipulating, and generating insights from a large dataset, including regression modeling

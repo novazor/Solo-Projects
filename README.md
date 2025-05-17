@@ -5,7 +5,7 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 ### Product Recommendation (Scikit-Learn/PyTorch)
 - Recommends grocery items to users based on purchase history, item sale frequency, and other variables
 - Collaborative filtering algorithm, utilizes K-Nearest-Neighbors from Scikit-Learn
-- Public Instacart dataset (1Mil+ transactions)
+- Public Instacart dataset (1,000,000+ transactions)
 - [Dataset - Kaggle](https://www.kaggle.com/datasets/yasserh/instacart-online-grocery-basket-analysis-dataset)
 
 ### Spam Detector (PyTorch)

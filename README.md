@@ -9,7 +9,7 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 - [Dataset - Kaggle](https://www.kaggle.com/datasets/yasserh/instacart-online-grocery-basket-analysis-dataset)
 
 ### Spam Detector (PyTorch)
-- NLP classification model on emails (String inputs), labeling as spam or not spam
+- Labels an inputted email as Spam or Non-Spam
 - Utilizes Word2Vec embeddings and NLTK for tokenization
 - 99% Accuracy
 - [Dataset - Kaggle](https://www.kaggle.com/datasets/nitishabharathi/email-spam-dataset)

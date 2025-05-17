@@ -2,7 +2,7 @@
 
 Note - This repository is intended as a "gallery" of my work. You may pull these files to run them locally, but the datasets will need to be downloaded as well. All datasets are either externally linked here, or automatically install with the imported libraries.
 
-### Product Recommendation (Scikit-Learn/PyTorch)
+### Product Recommendation System (Scikit-Learn/PyTorch)
 - Recommends grocery items to users based on purchase history, item sale frequency, and other variables
 - Collaborative filtering algorithm, utilizes K-Nearest-Neighbors from Scikit-Learn
 - Public Instacart dataset (1,000,000+ transactions)

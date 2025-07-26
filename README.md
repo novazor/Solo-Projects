@@ -2,6 +2,11 @@
 
 Note - This repository is intended as a "gallery" of my work. You may pull these files to run them locally, but the datasets will need to be downloaded as well. All datasets are either externally linked here, or automatically install with the imported libraries.
 
+### PDF-file RAG Assistant (IBM AI Engineering Capstone)
+![alt text][proj]
+[proj]: https://github.com/novazor/Solo-Projects/blob/main/QA_bot.png "RAG Project Screenshot"
+
+
 ### Product Rec (Scikit-Learn/PyTorch)
 - Recommends grocery items to users based on purchase history, item sale frequency, and other variables
 - Collaborative filtering algorithm, utilizes K-Nearest-Neighbors from Scikit-Learn
@@ -32,6 +37,7 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 - Determines if an image is of a ship, automobile, deer, cat, etc.
 - 10 distinct classes
 - Dataset imported from Cifar10 library
+
 
 ### Life Expectancy Demo (No ML - only data analysis)
 - Demonstration of cleaning, manipulating, and generating insights from a large dataset, including regression modeling

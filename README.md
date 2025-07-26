@@ -5,6 +5,8 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 ### PDF-file RAG Assistant (IBM AI Engineering Capstone)
 ![alt text][proj]
 
+*_This project is screenshot-only due to copyright from the IBM official course._
+
 [proj]: https://github.com/novazor/Solo-Projects/blob/main/QA_bot.png "RAG Project Screenshot"
 
 

@@ -1,11 +1,12 @@
 ## Rohan Parekh's Portfolio
+# LinkedIn: https://www.linkedin.com/in/rohan-parekh-39b070225/
 
 Note - This repository is intended as a "gallery" of my work. You may pull these files to run them locally, but the datasets will need to be downloaded as well. All datasets are either externally linked here, or automatically install with the imported libraries.
 
 ### PDF-file RAG Assistant (IBM AI Engineering Capstone)
 ![alt text][proj]
 
-*_This project is screenshot-only due to copyright from the IBM course._
+*_This project is screenshot-only due to copyright from the IBM course. The course certificate is visible on my LinkedIn._
 
 [proj]: https://github.com/novazor/Solo-Projects/blob/main/QA_bot.png "RAG Project Screenshot"
 

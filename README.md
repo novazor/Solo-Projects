@@ -4,7 +4,6 @@
 Note - This repository is intended as a "gallery" of my work. You may pull these files to run them locally, but the datasets will need to be downloaded as well. All datasets are either externally linked here, or automatically install with the imported libraries.
 
 ### PDF Copilot (Retrieval Augmented Generation)
-![alt text][proj]
 
 ![PDF Copilot UI](pdf_copilot/pdf_copilot_screenshot.png) "RAG Project Screenshot"
 

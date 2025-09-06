@@ -1,0 +1,13 @@
+pymupdf==1.24.9
+sentence-transformers
+faiss-cpu
+tqdm
+numpy
+httpx
+pydantic
+rich
+python-dotenv
+httpx
+streamlit
+fpdf2
+glob2

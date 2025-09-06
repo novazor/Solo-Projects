@@ -5,7 +5,12 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 
 ### PDF Copilot (Retrieval Augmented Generation)
 
-![PDF Copilot UI](pdf_copilot/pdf_copilot_screenshot.png) "RAG Project Screenshot"
+![PDF Copilot UI](pdf_copilot/pdf_copilot_screenshot.png) 
+- Ask questions about any PDF and get a short answer with the exact page references used.
+- Automatically splits long documents and builds a fast, reusable search index (FAISS) so results stay quick even for large files (saved locally).
+- Runs with a local model (Mistral Instruct). Simple controls let you choose how many passages to check and how conservative/creative the answer should be.
+- Built entirely with Python + Streamlit for the UI, PyMuPDF for PDF text, and a lightweight vector search engine (FAISS).
+
 
 
 ### Product Rec (Scikit-Learn/PyTorch)

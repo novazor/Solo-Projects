@@ -6,7 +6,7 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 ### PDF Copilot (Retrieval Augmented Generation)
 ![alt text][proj]
 
-[proj]: https://github.com/novazor/Solo-Projects/pdf_copilot/pdf_copilot_screenshot.png "RAG Project Screenshot"
+![PDF Copilot UI](pdf_copilot/pdf_copilot_screenshot.png) "RAG Project Screenshot"
 
 
 ### Product Rec (Scikit-Learn/PyTorch)

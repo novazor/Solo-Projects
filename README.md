@@ -11,6 +11,7 @@ _^ Sample use. In this example I uploaded a pdf of The Odyssey by Homer (464 pag
 - Automatically splits long documents and builds a fast, reusable search index (FAISS) so results stay quick even for large files (saved locally).
 - Runs with a local model (Mistral Instruct, ~8b parameters).
 - Built entirely with Python + Streamlit for the UI, PyMuPDF for PDF text, and a lightweight vector search engine (FAISS).
+- [Short Demo Video](https://youtu.be/zy974ldHlfQ)
 
 
 

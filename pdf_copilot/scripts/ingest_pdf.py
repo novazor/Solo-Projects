@@ -1,4 +1,4 @@
-# # test script for pdf ingestion
+# test script for pdf ingestion
 from src.ingest.pdf_loader import *
 from pathlib import Path
 
@@ -26,4 +26,5 @@ def main():
     
 if __name__ == "__main__":
     main()
+
 

@@ -11,7 +11,6 @@ _^ Sample use. A brief demo video is available on [YouTube](https://youtu.be/zy9
 - Automatically splits long documents and builds a fast, reusable search index (FAISS) so results stay quick even for large files (saved locally).
 - Runs with a local model (Mistral Instruct, ~8b parameters).
 - Built entirely with Python + Streamlit for the UI, PyMuPDF for PDF text, and a lightweight vector search engine (FAISS).
-- 
 
 
 

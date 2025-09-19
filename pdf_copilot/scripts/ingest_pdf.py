@@ -4,7 +4,7 @@ from pathlib import Path
 
 def main():
     """
-    Steps (implement inside):
+    Steps:
       1) Read input path
       2) call load_pdf()
       3) run clean_page_text() on each page
@@ -26,3 +26,4 @@ def main():
     
 if __name__ == "__main__":
     main()
+

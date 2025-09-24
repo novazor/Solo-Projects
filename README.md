@@ -8,9 +8,9 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 ![PDF Copilot UI](pdf_copilot/pdf_copilot_screenshot.png) 
 _^ Screenshot of a sample use. [Click here for a brief YouTube demo.](https://youtu.be/zy974ldHlfQ)_
 - This is a small chatbot assistant app that can run on any medium-high end PC. Upload a PDF, ask any questions about it, and get a short answer with the exact page references used.
-- Automatically splits long documents and builds a fast, reusable search index (FAISS) so results stay quick even for large files (saved locally).
-- Runs with a local model (Mistral Instruct, ~8b parameters).
-- Built entirely with Python + Streamlit for the UI, PyMuPDF for PDF text, and a lightweight vector search engine (FAISS). Used PyInstaller to ship as an EXE file.
+- Utilizes a FAISS Store for vector search and BAAI/bge-small-en-v1.5 embeddings.
+- Runs with a local LLM model (Mistral Instruct, ~8b parameters).
+- Built entirely with Python + Streamlit for the UI, PyMuPDF for PDF text, and PyInstaller to ship as an EXE file.
 
 ### Product Recommender (Scikit-Learn/PyTorch)
 - Recommends grocery items to users based on purchase history, item sale frequency, and other variables
@@ -30,7 +30,8 @@ _^ Screenshot of a sample use. [Click here for a brief YouTube demo.](https://yo
 - Dataset imported in-file from NLTK's public twitter_samples library
 
 ### Customer Churn Predictor (TensorFlow Keras)
-- Predicts customer churn on a bank dataset
+- Predicts customer churn on a bank dataset of user information (name, address, credit score, etc)
+- Predictions are placed for the following month from when the data was collected
 - [Dataset - Kaggle](https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset/data)
 
 ### Handwritten Digit Classifier (PyTorch)

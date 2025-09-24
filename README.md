@@ -12,13 +12,13 @@ _^ Screenshot of a sample use. [Click here for a brief YouTube demo.](https://yo
 - Runs with a local model (Mistral Instruct, ~8b parameters).
 - Built entirely with Python + Streamlit for the UI, PyMuPDF for PDF text, and a lightweight vector search engine (FAISS).
 
-### Product Rec (Scikit-Learn/PyTorch)
+### Product Recommender (Scikit-Learn/PyTorch)
 - Recommends grocery items to users based on purchase history, item sale frequency, and other variables
 - Collaborative filtering algorithm, utilizes K-Nearest-Neighbors from Scikit-Learn
 - Public Instacart dataset (1,000,000+ transactions)
 - [Dataset - Kaggle](https://www.kaggle.com/datasets/yasserh/instacart-online-grocery-basket-analysis-dataset)
 
-### Spam Detector (PyTorch)
+### Email Spam Detector (PyTorch)
 - Labels an inputted email as Spam or Non-Spam
 - Utilizes Word2Vec embeddings and NLTK for tokenization
 - 99% Accuracy
@@ -33,7 +33,7 @@ _^ Screenshot of a sample use. [Click here for a brief YouTube demo.](https://yo
 - Predicts customer churn on a bank dataset
 - [Dataset - Kaggle](https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset/data)
 
-### Handwritten (PyTorch)
+### Handwritten Digit Classifier (PyTorch)
 - Determines what digit is in an image of a handwritten number
 - Ten distinct classes (numbers 0-9)
 - [Dataset - Kaggle](https://www.kaggle.com/datasets/dhruvildave/english-handwritten-characters-dataset)
@@ -42,7 +42,6 @@ _^ Screenshot of a sample use. [Click here for a brief YouTube demo.](https://yo
 - Determines if an image is of a ship, automobile, deer, cat, etc.
 - 10 distinct classes
 - Dataset imported from Cifar10 library
-
 
 ### Life Expectancy Demo (No ML - only data analysis)
 - Demonstration of cleaning, manipulating, and generating insights from a large dataset, including regression modeling

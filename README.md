@@ -3,7 +3,7 @@
 
 Note - This repository is intended as a "gallery" of my work. You may pull these files to run them locally, but the datasets will need to be downloaded as well. All datasets are either externally linked here, or automatically install with the imported libraries.
 
-### PDF Copilot (Retrieval Augmented Generation)
+### PDF Copilot Chatbot Assistant (Retrieval Augmented Generation)
 
 ![PDF Copilot UI](pdf_copilot/sample_use.png) 
 _^ Screenshot of a sample use. [Click here for a brief YouTube demo.](https://youtu.be/zy974ldHlfQ)_

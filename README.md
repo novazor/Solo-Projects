@@ -6,7 +6,7 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 ### PDF Copilot Chatbot (Retrieval Augmented Generation)
 
 ![PDF Copilot UI](pdf_copilot/sample_use.png) 
-_^ Screenshot of a sample use. [Click here for a brief YouTube demo.](https://youtu.be/zy974ldHlfQ)_
+_^ Sample use. [Click here for a brief YouTube demo.](https://youtu.be/zy974ldHlfQ)_
 - This is a small chatbot assistant app that can run on any medium-high end PC. Upload a PDF, ask any questions about it, and get a short answer with the exact page references used.
 - Utilizes a FAISS Store for vector search and BAAI/bge-small-en-v1.5 embeddings.
 - Runs with a local LLM model (Mistral Instruct, ~8b parameters).

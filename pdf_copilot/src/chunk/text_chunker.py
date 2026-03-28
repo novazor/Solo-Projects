@@ -45,7 +45,7 @@ def chunk_paragraphs(
     Basically it'll do this:
       - Keep a buffer (string) and current page span (min/max page).
       - Append paragraphs until buffer >= target; emit chunk.
-      - For overlap: take last overlap_chars from emitted chunk as the next buffer prefix.
+      - For overlap: take last overlap_chars from emitted chunk as the start of the next buffer.
     """
     output = []
     buffer = []

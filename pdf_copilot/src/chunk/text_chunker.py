@@ -3,10 +3,6 @@ text_chunker.py
 
 This file handles turning PDF text into chunks for retrieval.
 Keeps doc_id and page span so citations are stil accurate later.
-
-Input shape:
-- pages: [{doc_id: str, page_num: int (1-based), text: str}]
-
 """
 from typing import List, Dict, Iterable
 import re

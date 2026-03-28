@@ -7,7 +7,7 @@ Note - This repository is intended as a "gallery" of my work. You may pull these
 
 ![PDF Copilot UI](pdf_copilot/sample_use.png) 
 _^ Sample use. [Click here for a brief YouTube demo.](https://youtu.be/zy974ldHlfQ)_
-- This is a small chatbot assistant app that can run on any medium-high end PC. Upload a PDF, ask any questions about it, and get a short answer with the exact page references used.
+- This is a small chatbot assistant app that can run on 7-8 gb of VRAM. Upload a PDF, ask any questions about it, and get a short answer with the exact page references used.
 - Utilizes a FAISS Store for vector search and BAAI/bge-small-en-v1.5 embeddings.
 - Runs with a local LLM model (Mistral Instruct, ~8b parameters).
 - Built entirely with Python + Streamlit for the UI, PyMuPDF for PDF text, and PyInstaller to ship as an EXE file.

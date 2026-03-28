@@ -1,20 +1,9 @@
 """
 answerer.py
 
-Thin wrapper that turns retrieved chunks into a final answer.
-Runs a map/reduce prompt over hits, extracts page citations like [p3] or [p2-4],
-and returns both the answer text and which chunks were used.
+This file turns retrieved chunks into a final answer.
 
-Exports:
-- answer_question(store, embedder, llm, question, texts, k=6) -> {answer, citations, used}
-- summarize_document(texts, metas, llm, style="Bullet Points", target_units=8) -> {...}
-- extract_citations(text) -> list[str]
-- preview_used(hits, n=3) -> list[str]  # debug/printing helper
-
-Notes:
-- Uses dense retrieval (retrieve_topk) upstream of the LLM call.
-- Domain-agnostic (no procurement heuristics).
-- Citations are parsed from the model’s output and normalized to page tokens.
+Extracts the page citations and returns both the answer text and which chunks were used.
 """
 
 from __future__ import annotations
@@ -31,9 +20,7 @@ from src.generate.prompts import build_context, qa_prompt
 from src.generate.llm_client import OllamaClient   
 
 
-# --------------------------------------------------------
-# Citations
-# --------------------------------------------------------
+# citations
 
 def _token_pages(tok: str) -> set[int]:
     if "-" in tok or "–" in tok:
@@ -60,10 +47,7 @@ def extract_citations(text: str) -> list[str]:
             seen.add(token)
     return output
 
-
-# --------------------------------------------------------
-# Generic PDF Summarizer (map/reduce)
-# --------------------------------------------------------
+# PDF Summarizer (map/reduce)
 
 _MAP_MAX_TOKENS = 280
 _REDUCE_MAX_TOKENS = 700
@@ -125,7 +109,6 @@ def _build_page_tag(meta: Dict) -> str:
         return "[p?]"
     if pe is None or pe == ps:
         return f"[p{ps}]"
-    # en dash for aesthetics; parser accepts '-' and '–'
     return f"[p{ps}–{pe}]"
 
 def _dedup_lines(lines: List[str]) -> List[str]:
@@ -257,19 +240,16 @@ def summarize_document(
     return {"answer": merged, "citations": citations, "used": []}
 
 
-# --------------------------------------------------------
-# Q&A 
-# --------------------------------------------------------
+# Q&A method
 
 def answer_question(store, embedder, llm, question: str, texts: List[str], k: int = 6) -> Dict:
     """
     Dense retrieval → context pack → QA prompt → citation check.
     No procurement/bond heuristics.
     """
-    # 1) Retrieval
+    # Retrieval
     hits = retrieve_topk(query=question, store=store, embedder=embedder, texts=texts, k=k)
 
-    # 2) Retrieval gate (kept behavior, slightly different thresholds for MiniLM)
     model_name = getattr(embedder, "name", "") or getattr(getattr(embedder, "model", None), "name", "")
     if "minilm" in str(model_name).lower():
         ok = has_enough_signal(hits, min_max=0.30, min_sum=0.90)
@@ -279,17 +259,14 @@ def answer_question(store, embedder, llm, question: str, texts: List[str], k: in
     if not ok:
         return {"answer": "I don't know.", "citations": [], "used": hits[:k]}
 
-    # 3) Context + prompt
+    # adding the context and the prompt
     ctx = build_context(hits[:k])
     msgs = qa_prompt(question, ctx)
 
-    # 4) Generate
     raw = llm.generate(system=msgs["system"], user=msgs["user"], max_tokens=256, temperature=0.1)
 
-    # 5) Extract cites
     cites = extract_citations(raw)
 
-    # 6) Guard: only allow pages present in the context
     allowed_pages: set[int] = set()
     for h in hits[:k]:
         try:
@@ -304,10 +281,7 @@ def answer_question(store, embedder, llm, question: str, texts: List[str], k: in
 
     return {"answer": raw.strip(), "citations": cites, "used": hits[:k]}
 
-
-# --------------------------------------------------------
-# Debug helpers
-# --------------------------------------------------------
+# Debug helper methods
 
 def preview_used(hits: List[Dict], n: int = 3) -> List[str]:
     """

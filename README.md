@@ -1,7 +1,7 @@
 ## Rohan Parekh's Portfolio
 ### LinkedIn: https://www.linkedin.com/in/rohan-parekh-39b070225/
 
-Note - This repository is intended as a "gallery" of my work. You may pull these files to run them locally, but the datasets will need to be downloaded as well. All datasets are either externally linked here, or automatically install with the imported libraries.
+Note - This repository is intended as a "gallery" of my work, and are not intended to be pulled and run locally.
 
 ### PDF Copilot (Retrieval Augmented Generation)
 

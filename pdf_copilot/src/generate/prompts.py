@@ -1,27 +1,13 @@
 """
 prompts.py
 
-Central place for the app’s prompt text and small builders.
-Holds the system/user templates for Q&A so model tweaks stay in one file.
-
-Exports:
-- build_context(hits: list[dict], max_chars: int = 3000) -> str
-- qa_prompt(question: str, context: str) -> dict[str, str]
-
-Conventions:
-- Answers must include page tokens like [p3] or [p2-4] when supported by context.
-- Be concise, ground claims in supplied text only, and say “I don't know.” when the answer isn’t in scope.
-
-Placeholders used in templates:
-{question}, {context}
+File for the model's prompt text + any other model tweaks
 """
 
 from typing import List, Dict
 import re
 
-# ------------------------------
 # Light cleanup for chunk text
-# ------------------------------
 def sanitize_for_prompt(text: str, max_chars: int = 1000) -> str:
     """
     Normalize whitespace, fix hyphen-wrapped breaks, remove obvious page footers,
@@ -38,9 +24,7 @@ def sanitize_for_prompt(text: str, max_chars: int = 1000) -> str:
         t = cut.rsplit(" ", 1)[0] + " …" if " " in cut else cut + " …"
     return t
 
-# ------------------------------
 # Small helpers for context pack
-# ------------------------------
 def _meta_get(hit: Dict, key: str):
     """Works for flattened metas OR nested under hit['metas']."""
     return hit.get(key, (hit.get("metas") or {}).get(key))
@@ -84,14 +68,12 @@ def qa_prompt(question: str, context: str) -> Dict[str, str]:
     user = f"Question: {question}\n\nContext:\n{context}\n\nAnswer with citations."
     return {"system": system, "user": user}
 
-# ------------------------------
 # smoke test 
-# ------------------------------
 if __name__ == "__main__":
     def _show(label: str, content: str) -> None:
         print(f"\n==== {label} ====\n{content}\n")
 
-    # Sample hits
+    # Sample hits for testing
     hits = [
         {"text": "Abstract: We present a method that improves F1 by 7% on the benchmark dataset.",
          "score": 0.62, "chunk_id": "A-0003", "page_start": 3, "page_end": 3},

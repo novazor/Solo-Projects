@@ -1,20 +1,7 @@
 """
 llm_client.py
 
-Small wrapper for a local Ollama server.
-Stores the model tag and base URL, and exposes:
-- ping() to sanity-check connectivity
-- generate(system, user, max_tokens=..., temperature=..., stream=False)
-  to run a chat-style request; returns text when stream is False.
-
-Typical use:
-    llm = OllamaClient(model="mistral:instruct")
-    llm.ping()
-    answer = llm.generate(system, user, max_tokens=256, temperature=0.2)
-
-Notes:
-- Uses httpx and will raise httpx.HTTPError on network issues.
-- Arguments are validated; keep timeouts modest for the UI.
+Runs the local Ollama server for hosting the llm, in this case mistral-instruct.
 """
 
 from src.index_store.faiss_store import FaissStore
@@ -25,7 +12,6 @@ import json
 from pathlib import Path
 import httpx
 
-# OllamaClient class definition
 class OllamaClient:
     def __init__(self, model: str = "mistral:instruct",
                  host: str = "http://localhost:11434",
@@ -49,17 +35,6 @@ class OllamaClient:
     def generate(self, system: str, user: str, *,
                  max_tokens: int = 256, temperature: float = 0.2,
                  stream: bool = False) -> str:
-        """
-        Generate a reply via the local Ollama /api/chat.
-
-        Sends system+user messages to self.model at self.base_url.
-        If stream=False, returns response["message"]["content"].
-        If stream=True, reads JSONL chunks, concatenates message.content until done.
-
-        Args: system, user, max_tokens (options.num_predict), temperature, stream
-        Returns: assistant text (stripped)
-        Raises: ValueError, httpx.HTTPError, json.JSONDecodeError
-        """
         # validates inputs
         if len(system) <= 0 or len(user) <= 0 or max_tokens <= 0 or temperature < 0 or temperature > 1:
             raise ValueError("Invalid parameter(s).")

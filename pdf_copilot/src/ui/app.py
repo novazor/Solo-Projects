@@ -1,22 +1,12 @@
 """
 app.py
 
-Streamlit front end for PDF Copilot (RAG over PDFs).
-Upload PDFs, turn pages into chunks, build or load a FAISS index,
-then ask questions with page-linked citations.
-
-Main pieces:
-- Sidebar: model tag, top_k, chunk size/overlap, rebuild toggle, index path.
-- Tabs: Upload, Make Chunks, Build/Load Index, Ask.
-- Pipeline hooks: pdf_loader.load_pdf -> text_chunker.chunk_paragraphs
-  -> faiss_store.FaissStore (build/load/query) -> retriever.retrieve_topk
-  -> answerer.answer_question.
-
-Session state:
-- Stores pages, chunks, texts/metas, index_dir, last hits, and settings.
-
-Run:
-- streamlit run src/ui/app.py
+main app file for running the application
+Uses:
+- streamlit for the UI
+- FAISS Store for indexing
+- bge small embeddings
+- regex, pymupdf and other string libraries for parsing text
 """
 import sys
 from pathlib import Path
@@ -46,7 +36,7 @@ def get_state() -> AppState:
     """
     Returns a mutable state bag for the app.
     No input parameters.
-    Populates/holds keys like:
+    Makes keys like:
       - 'embedder', 'llm', 'store', 'texts', 'metas'
       - 'last_hits', 'last_answer', 'last_question'
       - 'paths': {'interim_dir': Path, 'index_dir': Path}

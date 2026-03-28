@@ -1,20 +1,12 @@
 """
 text_chunker.py
 
-Helper to turn page-level text into overlapping chunks for retrieval.
-Keeps doc_id and page span so citations stay accurate later.
-
-Exports:
-- iter_page_paragraphs(pages) -> yields {doc_id, page_num, paragraph}
-- chunk_paragraphs(para_stream, target_chars=1200, overlap_chars=150)
-  -> list of {doc_id, chunk_id, page_start, page_end, text}
+This file handles turning PDF text into chunks for retrieval.
+Keeps doc_id and page span so citations are stil accurate later.
 
 Input shape:
 - pages: [{doc_id: str, page_num: int (1-based), text: str}]
 
-Notes:
-- Paragraph-first; then roll up to ~target_chars with a bit of overlap.
-- chunk_id order is stable; tweak sizes to fit your model’s context window.
 """
 from typing import List, Dict, Iterable
 import re

@@ -13,10 +13,7 @@ import re
 
 def iter_page_paragraphs(pages: List[Dict]) -> Iterable[Dict]:
     """
-    Yield {"doc_id","page_num","paragraph"}.
-    TODO:
-      - For each page["text"], split on two+ newlines.
-      - Strip trailing spaces; skip very short paras (< 40 chars) unless ALL CAPS heading.
+    Iterates through page paragraphs, parsed with Pymupdf
     """
     for page in pages:
         full_text = page["text"]
@@ -39,14 +36,14 @@ def chunk_paragraphs(
     overlap_chars: int = 150
 ) -> List[Dict]:
     """
-    Build rolling chunks ~target_chars with overlap.
+    Build chunks that are roughly ~target_chars with overlap.
     Keep metadata:
       - doc_id (single doc here)
       - chunk_id (e.g., f"{doc_id}-{i:04d}")
       - page_start, page_end
       - text
-    Algorithm (high-level):
-      - Keep a buffer (string) and current span (min/max page).
+    Basically it'll do this:
+      - Keep a buffer (string) and current page span (min/max page).
       - Append paragraphs until buffer >= target; emit chunk.
       - For overlap: take last overlap_chars from emitted chunk as the next buffer prefix.
     """

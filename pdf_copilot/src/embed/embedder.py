@@ -11,9 +11,7 @@ class Embedder:
 
     def embed_texts(self, texts: List[str]):
         """
-        TODO:
-          - Encode with normalize_embeddings=True
-          - Return np.ndarray [n, dim] float32
+        embeds the texts, returns np.ndarray [n, dim] float32
         """
         embeddings = self.model.encode(
           texts,

@@ -5,7 +5,7 @@ this file implements the FAISS Store, for indexing.
 Builds a small wrapper around a FAISS index with a sidecar meta.json.
 
 Some notes:
-- Defaults to assume inner-product on normalized embeddings. switch to L2 if needed.
+- Defaults to assume inner-product on normalized embeddings. switches to L2 if needed.
 - Keep the .index and .json together so reloads stay consistent.
 """
 

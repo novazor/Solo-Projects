@@ -30,10 +30,6 @@ class FaissStore:
     def build(self, embeddings, metas: List[Dict]) -> None:
         """
         Builds a FAISS index
-        TODO:
-          - Create FAISS index (IndexFlatIP or L2)
-          - Add embeddings
-          - Persist index and parallel metas (JSON)
         """
         assert embeddings.ndim == 2 and embeddings.dtype == np.float32
         assert embeddings.shape[1] == self.dim

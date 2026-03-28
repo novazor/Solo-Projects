@@ -1,18 +1,11 @@
 """
 faiss_store.py
 
-Small wrapper around a FAISS index with a sidecar meta.json.
-Holds file paths, builds or loads the index, and runs top-k searches.
-Meta entries align 1:1 with vector ids (0..N-1), so you can recover doc/page info.
+this file implements the FAISS Store, for indexing.
+Builds a small wrapper around a FAISS index with a sidecar meta.json.
 
-Exports:
-- class FaissStore(dim, index_path, meta_path)
-  .load()          # read index and metas from disk
-  .query(vec, k=8) # return [(meta_idx, score), ...]
-  # build/save helpers live here too in typical use.
-
-Notes:
-- Defaults assume inner-product on normalized embeddings; switch to L2 if needed.
+Some notes:
+- Defaults to assume inner-product on normalized embeddings. switch to L2 if needed.
 - Keep the .index and .json together so reloads stay consistent.
 """
 
